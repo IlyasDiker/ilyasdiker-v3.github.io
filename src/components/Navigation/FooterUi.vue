@@ -2,7 +2,7 @@
     <footer class="FooterSection py-5" id="footer">
         <div class="container">
             <div class="flex-col">
-                <span class="text-sm fw-400 mb-2">Follow me</span>
+                <span class="text-sm fw-400 mb-3">Socials</span>
                 <ul class="footer-list">
                     <li>
                         <a class="link"><i class='bx bxl-instagram'></i> Instagram</a>
@@ -14,6 +14,7 @@
                         <a class="link">Mail</a>
                     </li>
                 </ul>
+                <span class="text-xs op-5 mt-5 mono">© Copyright {{new Date().getYear()}} - Ilyas Benhssine</span>
             </div>
         </div>
     </footer>
