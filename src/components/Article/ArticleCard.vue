@@ -1,14 +1,16 @@
 <template>
-    <div class="listcard" tabindex="0">
-        <img :src="background" role="presentation" class="listcard_background" v-if="background">
-        <video :src="video" role="presentation" class="listcard_background" v-if="video" autoplay loop muted></video>
+    <div class="articlecard" tabindex="0">
+        <img :src="background" role="presentation" class="articlecard_background" v-if="background">
+        <video :src="video" role="presentation" class="articlecard_background" v-if="video" autoplay loop muted></video>
         <div class="flex-col content">
-            <span class="text-2xl fw-500 mb-1">{{title}}</span>
-            <span class="text-base op-7 paragraph">{{description}}</span>
         </div>
-        <div class="listcard_footer content">
-            <span class="mono">{{footer}}</span>
-            <span class="listcard_arrow">
+        <div class="articlecard_footer content">
+            <div class="flex-col">
+                <span class="text-xs op-7 mono mb-3">{{eyebrow}}</span>
+                <span class="text-2xl fw-500 mb-1">{{title}}</span>
+                <span class="text-base op-7 paragraph">{{description}}</span>
+            </div>
+            <span class="articlecard_arrow">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
@@ -24,12 +26,13 @@ export default {
     video: String,
     title: String,
     description: String,
+    eyebrow: String
   },
 }
 </script>
 
 <style lang="scss" scoped>
-    .listcard{
+    .articlecard{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -47,7 +50,7 @@ export default {
         &:hover, &:focus{
             transform: scale(1.005);
             box-shadow: #00000071 0px 8px 30px 6px;
-            .listcard_footer{
+            .articlecard_footer{
                 transform: translateX(5px);
             }
         }
@@ -59,11 +62,11 @@ export default {
         &::after{
             position: absolute;
             content: '';
-            top: 0;
+            bottom: 0;
             right: 0;
             left: 0;
             height: 200px;
-            background: linear-gradient(var(--background), transparent);
+            background: linear-gradient(transparent,var(--background));
             z-index: 0;
         }
 

@@ -2,11 +2,12 @@
     <nav class="navbar">
         <div class="container">
             <ul class="navbar-items">
-                <router-link to="/#hero"><img src="@/assets/logo-w.png" alt=""></router-link>
-                <router-link to="/" role="listitem">About me</router-link>
-                <router-link to="/services" role="listitem">My services</router-link>
+                <Transition name="heroicon">
+                    <router-link to="/#hero" v-show="(isScrolled && $route.name == 'home') || $route.name != 'home'"><img src="@/assets/logo-w.png" alt=""></router-link>
+                </Transition>
+                <router-link to="/about" role="listitem">About me</router-link>
                 <router-link to="/projects" role="listitem">Projects</router-link>
-                <router-link to="/technologies" role="listitem">Technologies</router-link>
+                <router-link to="/blog" role="listitem">Blog</router-link>
                 <a href="" role="listitem"><i class='bx bxl-github'></i> Github</a>
                 <a href="" role="listitem"><i class='bx bxl-linkedin-square'></i> LinkedIn</a>
             </ul>
@@ -16,7 +17,29 @@
 
 <script>
 export default {
-    
+    data () {
+        return {
+            isScrolled: false
+        }
+    },
+    methods: {
+        handleScroll(e){
+            if(e.target.scrollTop > 100){
+                this.isScrolled = true;
+            } else {
+                this.isScrolled = false;
+            }
+        }
+    },
+    created () {
+        let app = document.querySelector('#app');
+        app.removeEventListener('scroll', this.handleScroll);
+        app.addEventListener('scroll', this.handleScroll);
+    },
+    unmounted(){
+        let app = document.querySelector('#app');
+        app.removeEventListener('scroll', this.handleScroll);
+    },
 }
 </script>
 
@@ -62,5 +85,18 @@ export default {
                 }
             }
         }
+    }
+
+    .heroicon-enter-active,
+    .heroicon-leave-active {
+        transition: max-width 0.8s ease-in-out, transform 0.2s ease-in-out;
+        max-width: 50px;
+    }
+
+    .heroicon-enter-from,
+    .heroicon-leave-to {
+        max-width: 0;
+        opacity: 0;
+        transform: translateX(-100%);
     }
 </style>

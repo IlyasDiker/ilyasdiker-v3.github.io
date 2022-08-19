@@ -87,6 +87,10 @@ export default {
         app.removeEventListener('scroll', this.handleScroll);
         app.addEventListener('scroll', this.handleScroll);
     },
+    unmounted(){
+        let app = document.querySelector('#app');
+        app.removeEventListener('scroll', this.handleScroll);
+    },
     components: { ShortcutButtonWidget }
 }
 </script>

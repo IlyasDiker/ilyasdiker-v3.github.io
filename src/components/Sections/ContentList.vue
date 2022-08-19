@@ -3,11 +3,13 @@
         <div class="container py-5">
             <ul class="ContentList-items">
                 <li>
-                    <ListCard 
-                        title="About me"
-                        description="Who am I? Discover my Philosophy."
-                        :background="require('@/assets/aboutme.jpg')"
-                    />
+                    <router-link to="/about">
+                        <ListCard 
+                            title="About me"
+                            description="Who am I? Discover my Philosophy."
+                            :background="require('@/assets/aboutme.jpg')"
+                        />
+                    </router-link>
                 </li>
                 <li>
                     <router-link to="/services">
