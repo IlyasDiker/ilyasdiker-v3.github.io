@@ -7,38 +7,44 @@
                         title="About me"
                         description="Who am I? Discover my Philosophy."
                         :background="require('@/assets/aboutme.jpg')"
-                        />
+                    />
                 </li>
                 <li>
-                    <ListCard 
-                        title="My Services"
-                        description="Full-stack Technology solutions from concept & design to development & post-production support."
-                        :video="require('@/assets/myservices.mp4')"
-                        />
+                    <router-link to="/services">
+                        <ListCard 
+                            title="My Services"
+                            description="Full-stack Technology solutions from concept & design to development & post-production support."
+                            :video="require('@/assets/myservices.mp4')"
+                            />
+                    </router-link>
                 </li>
                 <li>
-                    <ListCard 
-                        title="My Projects"
-                        description="Driving digital solutions forward."
-                        
-                        />
+                    <router-link to="/projects">
+                        <ListCard 
+                            title="My Projects"
+                            description="Driving digital solutions forward."
+                            :background="require('@/assets/myprojects.jpg')"
+                            />
+                    </router-link>
                 </li>
                 <li>
                     <ListCard 
                         title="Technologies"
                         description="Everything has been developed in-house, no templates or bootstrap."
-                        
+                        :background="require('@/assets/technologies.jpg')"
                         />
                 </li>
             </ul>
         </div>
+        <ShortcutWidget/>
     </div>
 </template>
 
 <script>
 import ListCard from '../ListCard.vue';
+import ShortcutWidget from '../Widgets/ShortcutWidget.vue';
 export default {
-    components: { ListCard }
+    components: { ListCard, ShortcutWidget }
 }
 </script>
 
@@ -59,4 +65,5 @@ export default {
             }
         }
     }
+    
 </style>

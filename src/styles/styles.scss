@@ -18,7 +18,7 @@
 }
 
 :root{
-    --container-width: 1300px;
+    --container-width: 1600px;
     --container-medium-width: 800px;
     --container-small-width: 400px;
     --container-padding: 30px;
@@ -27,7 +27,7 @@
     
     --background: #0F1011;
 
-    @media (max-width: 1300px) {
+    @media (max-width: 1600px) {
         --container-padding: 25px;
     }
     @media (max-width: 400px) {

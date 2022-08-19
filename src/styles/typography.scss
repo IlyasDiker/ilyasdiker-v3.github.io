@@ -91,7 +91,7 @@ html{
     position: relative;
     &::after{
         content: '';
-        height: 2px;
+        height: 1px;
         background: var(--primary-dimmed);
         width: 0%;
         transition: 0.2s ease-in-out;
@@ -102,6 +102,12 @@ html{
         color: var(--primary-dimmed);
         &::after{
             width: 100%;
+        }
+    }
+    &.white{
+        color: white;
+        &::after{
+            background: white;
         }
     }
 }
@@ -164,4 +170,8 @@ a{
         list-style: none;
         padding-left: 15px;
     }
+}
+
+.uppercase{
+    text-transform: uppercase;
 }
