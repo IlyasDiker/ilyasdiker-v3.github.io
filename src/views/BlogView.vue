@@ -3,7 +3,7 @@
         <div class="container my-5 py-5">
             <div class="flex-col mb-5">
                 <span class="text-xl fw-600 mb-1">Blog</span>
-                <span class="paragprah text-xl fw-400 op-9">
+                <span class="paragprah text-xl fw-400 op-8">
                     Tips tricks and stories, about<br>
                     business, software engineering & cars.
                 </span>
@@ -31,21 +31,6 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-    .ContentList{
-        display: flex;
-        flex-direction: column;
-        &-items{
-            display: flex;
-            flex-direction: column;
-            list-style: none;
-            gap: 40px;
-            width: 80%;
-            max-width: 1000px;
-            transition: 0.2s ease-in-out;
-            @media (max-width: 1000px) {
-                width: 100%;
-            }
-        }
-    }
+<style lang="scss">
+
 </style>

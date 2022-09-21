@@ -29,4 +29,8 @@ const router = createRouter({
   routes
 })
 
+router.beforeEach(()=>{
+  window.screenTop = 0
+})
+
 export default router

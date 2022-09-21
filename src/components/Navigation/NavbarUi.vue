@@ -8,8 +8,8 @@
                 <router-link to="/about" role="listitem">About me</router-link>
                 <router-link to="/projects" role="listitem">Projects</router-link>
                 <router-link to="/blog" role="listitem">Blog</router-link>
-                <a href="" role="listitem"><i class='bx bxl-github'></i> Github</a>
-                <a href="" role="listitem"><i class='bx bxl-linkedin-square'></i> LinkedIn</a>
+                <a href="https://github.com/IlyasDiker" target="_blank" role="listitem"><i class='bx bxl-github'></i> Github</a>
+                <a href="https://www.linkedin.com/in/ilyasbenhssine/" target="_blank" role="listitem"><i class='bx bxl-linkedin-square'></i> LinkedIn</a>
             </ul>
         </div>
     </nav>

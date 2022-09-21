@@ -23,6 +23,7 @@ export default {
     background: String,
     video: String,
     title: String,
+    footer: String,
     description: String,
   },
 }

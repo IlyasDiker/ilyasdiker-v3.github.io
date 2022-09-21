@@ -134,3 +134,20 @@
     flex-direction: column;
     margin-block: 20px;
 }
+
+.ContentList{
+    display: flex;
+    flex-direction: column;
+    &-items{
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        gap: 40px;
+        width: 80%;
+        max-width: 1000px;
+        transition: 0.2s ease-in-out;
+        @media (max-width: 1000px) {
+            width: 100%;
+        }
+    }
+}
