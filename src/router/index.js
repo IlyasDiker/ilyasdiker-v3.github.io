@@ -30,7 +30,7 @@ const router = createRouter({
 })
 
 router.beforeEach(()=>{
-  window.screenTop = 0
+  document.querySelector('#app').scrollTop = 0
 })
 
 export default router

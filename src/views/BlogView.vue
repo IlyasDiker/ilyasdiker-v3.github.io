@@ -10,13 +10,21 @@
             </div>
             <div class="ContentList">
                 <ul class="ContentList-items">
-                    <li>
-                        <ArticleCard 
-                            eyebrow="TECH - 04 JAN"
-                            title="Software Engineering"
-                        />
-                    </li>
-                    <template>
+                    <template v-if="articles.length > 0">
+                        <template v-for="(item, index) in articles" :key="index">
+                            <li>
+                                <ArticleCard 
+                                    :eyebrow="`${item.topic} - ${item.created_at}`"
+                                    :title="item.title"
+                                    :background="item.cover"
+                                />
+                            </li>
+                        </template>
+                    </template>
+                    <template v-else>
+                        <li>
+                            <span class="text-base op-7">No articles found</span>
+                        </li>
                     </template>
                 </ul>
             </div>
@@ -27,6 +35,14 @@
 <script>
 import ArticleCard from "../components/Article/ArticleCard.vue";
 export default {
+    data () {
+        return {
+            articles: []
+        }
+    },
+    setup(){
+
+    },
     components: { ArticleCard }
 }
 </script>
