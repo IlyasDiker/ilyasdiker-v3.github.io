@@ -29,11 +29,15 @@
                 </ul>
             </div>
         </div>
+        <ModalUi :open="$route.name != 'blog'" :back="'blog'">
+            <router-view></router-view>
+        </ModalUi>
     </div>
 </template>
 
 <script>
 import ArticleCard from "../components/Article/ArticleCard.vue";
+import ModalUi from "@/components/ModalUi.vue";
 export default {
     data () {
         return {
@@ -43,7 +47,7 @@ export default {
     setup(){
 
     },
-    components: { ArticleCard }
+    components: { ArticleCard, ModalUi }
 }
 </script>
 

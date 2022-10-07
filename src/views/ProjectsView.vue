@@ -30,8 +30,8 @@
                 </ul>
             </div>
         </div>
-        <ModalUi>
-            <h1>Hello World</h1>
+        <ModalUi :open="$route.name != 'projects'" :back="'projects'">
+            <router-view></router-view>
         </ModalUi>
     </div>
 </template>

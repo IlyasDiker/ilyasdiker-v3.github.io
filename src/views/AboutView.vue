@@ -13,13 +13,13 @@
             </div>
             <div class="ContentList">
                 <ul class="ContentList-items">
-                    <li>
+                    <RouterLink :to="{name:'about.future'}" role="listitem">
                         <ArticleCard 
                             eyebrow="2030"
                             title="Future"
                             background="https://whitewallapi.wpenginepowered.com/wp-content/uploads/2021/12/da-nft1-light1-v26-estado01-0003-min-1366x769.png"
                         />
-                    </li>
+                    </RouterLink>
                     <li>
                         <ArticleCard 
                             eyebrow="2030"
@@ -45,13 +45,17 @@
                 </div>
             </div>
         </div>
+        <ModalUi :open="$route.name != 'about'" :back="'about'">
+            <router-view></router-view>
+        </ModalUi>
     </div>
 </template>
 
 <script>
 import ArticleCard from '@/components/Article/ArticleCard.vue';
+import ModalUi from '@/components/ModalUi.vue';
 export default {
-    components: { ArticleCard }
+    components: { ArticleCard, ModalUi }
 }
 </script>
 
