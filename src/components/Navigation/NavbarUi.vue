@@ -3,19 +3,20 @@
         <div class="container">
             <ul class="navbar-items">
                 <Transition name="heroicon">
-                    <router-link to="/#hero" v-show="(isScrolled && $route.name == 'home') || $route.name != 'home'"><img src="@/assets/logo-w.png" alt=""></router-link>
+                    <router-link to="/#hero" v-show="(isScrolled && $route.name == 'home') || $route.name != 'home'" aria-label="Home"><img src="@/assets/logo-w.png" alt=""></router-link>
                 </Transition>
                 <router-link to="/about" role="listitem">About me</router-link>
                 <router-link to="/projects" role="listitem">Projects</router-link>
                 <router-link to="/blog" role="listitem">Blog</router-link>
-                <a href="https://github.com/IlyasDiker" target="_blank" role="listitem"><i class='bx bxl-github'></i> Github</a>
-                <a href="https://www.linkedin.com/in/ilyasbenhssine/" target="_blank" role="listitem"><i class='bx bxl-linkedin-square'></i> LinkedIn</a>
+                <a :href="socials.github" target="_blank" role="listitem"><i class='bx bxl-github'></i> Github</a>
+                <a :href="socials.linkedin" target="_blank" role="listitem"><i class='bx bxl-linkedin-square'></i> LinkedIn</a>
             </ul>
         </div>
     </nav>
 </template>
 
 <script>
+import {socials} from '@/data/about'
 export default {
     data () {
         return {
@@ -40,6 +41,9 @@ export default {
         let app = document.querySelector('#app');
         app.removeEventListener('scroll', this.handleScroll);
     },
+    setup(){
+        return {socials}
+    }
 }
 </script>
 

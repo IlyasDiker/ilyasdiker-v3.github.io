@@ -23,10 +23,20 @@ const routes = [
     component: () => import('../views/AboutView.vue'),
     children: [
       {
-        path: 'future',
-        name: 'about.future',
-        component: () => import('../views/about/FutureView.vue')
-      }
+        path: 'who-is-ilyas',
+        name: 'about.whois',
+        component: () => import('../views/about/WhoisView.vue')
+      },
+      {
+        path: 'faq',
+        name: 'about.faq',
+        component: () => import('../views/about/FaqView.vue')
+      },
+      {
+        path: 'process',
+        name: 'about.process',
+        component: () => import('../views/about/ProcessView.vue')
+      },
     ]
   }
 ]
@@ -36,8 +46,10 @@ const router = createRouter({
   routes
 })
 
-router.beforeEach(()=>{
-  document.querySelector('#app').scrollTop = 0
+router.beforeEach((to, from)=>{
+  if(!(to.matched.length > 1 || from.matched.length > 1)){
+    document.querySelector('#app').scrollTop = 0
+  }
 })
 
 export default router

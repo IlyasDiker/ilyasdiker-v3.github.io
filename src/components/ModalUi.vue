@@ -3,9 +3,9 @@
         <div class="modal-backdrop" @click="goBack()">
         </div>
         <div class="modal-container">
-            <div class="container padded">
-                <slot></slot>
-            </div>
+            
+            <slot></slot>
+            
         </div>
     </div>
 </template>
@@ -60,6 +60,7 @@ export default {
         flex-grow: 1;
         transition: 0.2s ease-in-out;
         transform: translateX(100%);
+        overflow: auto;
     }
     @media (max-width: 1050px) {
         flex-direction: column;

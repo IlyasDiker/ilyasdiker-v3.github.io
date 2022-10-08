@@ -30,7 +30,7 @@
                 </ul>
             </div>
         </div>
-        <ModalUi :open="$route.name != 'projects'" :back="'projects'">
+        <ModalUi :open="$route.matched.length > 1" :back="'projects'">
             <router-view></router-view>
         </ModalUi>
     </div>

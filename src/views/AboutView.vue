@@ -4,7 +4,7 @@
             <div class="flex-col mb-5">
                 <span class="text-xl fw-600 mb-1">About me</span>
                 <span class="paragprah text-xl fw-400 op-8">
-                    Located in <a class="link stealth white" href="https://earth.google.com/web/@33.96921885,-6.8572628,68.7775257a,30847.4058482d,35y,0h,0t,0r/data=CkIaQBI6CiQweGRhNzZiODcxZjUwYzVjMToweDdhYzk0NmVkNzQwODA3NmIqElJhYmF0Ctin2YTYsdio2KfYtxgCIAE" target="_blank">Rabat</a> ,<br>
+                    Located in <a class="link stealth white" aria-label="Explore Rabat on Google earth" href="https://earth.google.com/web/@33.96921885,-6.8572628,68.7775257a,30847.4058482d,35y,0h,0t,0r/data=CkIaQBI6CiQweGRhNzZiODcxZjUwYzVjMToweDdhYzk0NmVkNzQwODA3NmIqElJhYmF0Ctin2YTYsdio2KfYtxgCIAE" target="_blank">Rabat</a> ,<br>
                     Male Homosapien, making companies thrive.
                 </span>
                 <span class="paragraph mt-5 py-5 text-2xl">
@@ -13,27 +13,28 @@
             </div>
             <div class="ContentList">
                 <ul class="ContentList-items">
-                    <RouterLink :to="{name:'about.future'}" role="listitem">
+                    <RouterLink :to="{name:'about.whois'}" role="listitem">
                         <ArticleCard 
                             eyebrow="2030"
-                            title="Future"
+                            title="Who is Ilyas?"
+                            description=""
                             background="https://whitewallapi.wpenginepowered.com/wp-content/uploads/2021/12/da-nft1-light1-v26-estado01-0003-min-1366x769.png"
                         />
                     </RouterLink>
-                    <li>
+                    <RouterLink :to="{name:'about.process'}" role="listitem">
                         <ArticleCard 
                             eyebrow="2030"
-                            title="Present"
+                            title="My Process"
                             background="https://whitewallapi.wpenginepowered.com/wp-content/uploads/2021/12/da-nft3-v16-estado01-0051-min-1366x769.png"
                         />
-                    </li>
-                    <li>
+                    </RouterLink>
+                    <RouterLink :to="{name:'about.faq'}" role="listitem">
                         <ArticleCard 
                             eyebrow="2000"
-                            title="Past"
+                            title="FAQ"
                             background="https://whitewallapi.wpenginepowered.com/wp-content/uploads/2021/12/da-nft2-v20-estado01-0004-min-1366x769.png"
                         />
-                    </li>
+                    </RouterLink>
                     <li>
                         <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/76J1za0YlPd31bYXcDdUZ2?utm_source=generator&theme=0" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                     </li>
@@ -45,7 +46,7 @@
                 </div>
             </div>
         </div>
-        <ModalUi :open="$route.name != 'about'" :back="'about'">
+        <ModalUi :open="$route.matched.length > 1" :back="'about'">
             <router-view></router-view>
         </ModalUi>
     </div>

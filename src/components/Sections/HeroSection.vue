@@ -5,7 +5,7 @@
             <div class="flex-col">
                 <h1 class="text-5xl fw-600 mb-4">Ilyas Benhssine</h1>
                 <span class="text-5xl fw-300 mb-5">Software Engineer</span>
-                <a class="scroll-indicator" href="#maincontent">
+                <a class="scroll-indicator" href="#maincontent" aria-label="Scroll down for more">
                     <span class="mono">Scroll down for more</span>
                     <svg viewBox="0 0 15 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M7.17 0.5C3.21 0.5 0 3.488 0 7.175V13.514C0 16.251 1.8 18.625 4.35 19.658V17.508C2.97 16.642 2.04 15.189 2.04 13.514V7.175C2.04 4.549 4.35 2.399 7.17 2.399C10.02 2.399 12.3 4.549 12.3 7.175V13.514C12.3 15.189 11.37 16.642 9.99 17.508V19.658C12.54 18.625 14.34 16.279 14.34 13.514V7.175C14.34 3.488 11.13 0.5 7.17 0.5Z" fill="white"/>
