@@ -1,5 +1,10 @@
 exports.questions = [
     {
+        question: 'Can you make me a wordpress website?',
+        asnwer: `NO, Wordpress is an absolute utter garbage.`,
+        img: require('@/assets/no.webp')
+    },
+    {
         question: 'How much is a website?',
         asnwer: `Hmm, let me ask you something first: How much is a car? 
         Depends on which one you want, right? 

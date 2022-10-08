@@ -16,7 +16,10 @@
             </button>
           </div>
           <div class="faq-row-answer text-xl paragraph">
-            {{ item.asnwer }}
+            <div class="flex-col gap-10">
+              <p>{{ item.asnwer }}</p>
+              <img :src="item.img" v-if="item.img" width="200">
+            </div>
           </div>
         </div>
       </template>
