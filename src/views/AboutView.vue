@@ -8,7 +8,7 @@
                     Male Homosapien, making companies thrive.
                 </span>
                 <span class="paragraph mt-5 py-5 text-2xl">
-                  Developing skill through doing, guiltlessly exploring passion and interests, imbuing quality. Mindful that “everything around me is someone’s life work.”
+                  Developing skill through doing, guiltlessly exploring passion and interests, imbuing quality. “My work is my life. I don't distinguish.”
                 </span>
             </div>
             <div class="ContentList">

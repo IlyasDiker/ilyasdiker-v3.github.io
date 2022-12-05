@@ -1,8 +1,8 @@
 <template>
   <div class="flex-col">
     <div class="flex-col container padded py-4 gap-10">
-      <span class="text-3xl fw-600">Why Ilyas?</span>
-      <span class="text-xl fw-500">Because you should pick me</span>
+      <span class="text-3xl fw-600">Who is Ilyas?</span>
+      <span class="text-xl fw-500">Get to know me.</span>
     </div>
     <img src="https://whitewallapi.wpenginepowered.com/wp-content/uploads/2021/12/da-nft1-light1-v26-estado01-0003-min-1366x769.png" alt="">
     <div class="container padded py-5">

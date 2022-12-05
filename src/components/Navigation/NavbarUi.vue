@@ -54,6 +54,7 @@ export default {
         left: 0;
         right: 0;
         padding-top: var(--container-padding);
+        background: linear-gradient(var(--background), transparent);
         z-index: 100;
         transition: padding 0.2s ease-in-out;
         &-items{
