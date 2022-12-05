@@ -13,11 +13,13 @@
                     <template v-if="articles.length > 0">
                         <template v-for="(item, index) in articles" :key="index">
                             <li>
-                                <ArticleCard 
-                                    :eyebrow="`${item.topic} - ${item.created_at}`"
-                                    :title="item.title"
-                                    :background="item.cover"
-                                />
+                                <a :href="item.redirect" target="_blank">
+                                    <ArticleCard 
+                                        :eyebrow="`${item.topic} - ${item.created_at}`"
+                                        :title="item.title"
+                                        :background="item.cover"
+                                    />
+                                </a>
                             </li>
                         </template>
                     </template>
@@ -38,14 +40,14 @@
 <script>
 import ArticleCard from "../components/Article/ArticleCard.vue";
 import ModalUi from "@/components/ModalUi.vue";
+import {articles} from '@/data/articles'
 export default {
     data () {
         return {
-            articles: []
         }
     },
     setup(){
-
+        return {articles}
     },
     components: { ArticleCard, ModalUi }
 }

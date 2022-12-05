@@ -12,15 +12,6 @@
                     </router-link>
                 </li>
                 <li>
-                    <router-link to="/services">
-                        <ListCard 
-                            title="My Services"
-                            description="Full-stack Technology solutions from concept & design to development & post-production support."
-                            :video="require('@/assets/myservices.mp4')"
-                            />
-                    </router-link>
-                </li>
-                <li>
                     <router-link to="/projects">
                         <ListCard 
                             title="My Projects"
@@ -30,11 +21,22 @@
                     </router-link>
                 </li>
                 <li>
-                    <ListCard 
-                        title="Technologies"
-                        description="Everything has been developed in-house, no templates or bootstrap."
-                        :background="require('@/assets/technologies.jpg')"
-                        />
+                    <router-link to="/blog">
+                        <ListCard 
+                            title="Blog"
+                            description="Everything has been developed in-house, no templates or bootstrap."
+                            :background="require('@/assets/technologies.jpg')"
+                            />
+                    </router-link>
+                </li>
+                <li>
+                    <router-link to="/services">
+                        <ListCard 
+                            title="My Services"
+                            description="Full-stack Technology solutions from concept & design to development & post-production support."
+                            :video="require('@/assets/myservices.mp4')"
+                            />
+                    </router-link>
                 </li>
             </ul>
         </div>

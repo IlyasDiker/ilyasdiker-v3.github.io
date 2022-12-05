@@ -42,7 +42,7 @@
             </div>
             <div class="flex-col my-5">
                 <div class="paragraph text-base">
-                    I'm clearly interested in too many things so I'm trying to slow down and be more present. Literally slow down by riding less, using less stuff in general and learn to appreciate little things. Like driving fast it kills ego. Feel free to check my <a href="https://www.linkedin.com/in/ilyasbenhssine/" target="_blank" class="link">Linkedin</a> if you are into this kind of things or send me an email like a normal person <a class="link" href="mailto:ilyasbenhssine@gmail.com">ilyasbenhssine@gmail.com</a>.
+                    I'm clearly interested in too many things so I'm trying to slow down and be more present. Literally slow down by riding less, using less stuff in general and learn to appreciate little things. Feel free to check my <a href="https://www.linkedin.com/in/ilyasbenhssine/" target="_blank" class="link">Linkedin</a> if you are into this kind of things or send me an email like a normal person <a class="link" href="mailto:ilyasbenhssine@gmail.com">ilyasbenhssine@gmail.com</a>.
                 </div>
             </div>
         </div>

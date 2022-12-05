@@ -42,7 +42,7 @@
                         </ShortcutButtonWidget>
                     </div>
                 </Transition>
-                <Transition name="slideup">
+                <!-- <Transition name="slideup">
                     <div class="col-12" v-show="isScrolled">
                         <ShortcutButtonWidget>
                             <template v-slot:label>
@@ -56,7 +56,7 @@
                             </template>
                         </ShortcutButtonWidget>
                     </div>
-                </Transition>
+                </Transition> -->
             </div>
         </div>
         <div class="widgets-list mobile">
