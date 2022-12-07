@@ -15,23 +15,25 @@
                 <ul class="ContentList-items">
                     <RouterLink :to="{name:'about.whois'}" role="listitem">
                         <ArticleCard 
-                            eyebrow="2030"
+                            eyebrow=""
                             title="Who is Ilyas?"
                             description=""
-                            background="https://whitewallapi.wpenginepowered.com/wp-content/uploads/2021/12/da-nft1-light1-v26-estado01-0003-min-1366x769.png"
+                            background="https://api.ferrari.com/cms/network/medias//resize/6102a9a31ed55b7126733b4a-inside2_1250x700?apikey=9QscUiwr5n0NhOuQb463QEKghPrVlpaF"
                         />
                     </RouterLink>
                     <RouterLink :to="{name:'about.process'}" role="listitem">
                         <ArticleCard 
-                            eyebrow="2030"
+                            eyebrow=""
                             title="My Process"
-                            background="https://whitewallapi.wpenginepowered.com/wp-content/uploads/2021/12/da-nft3-v16-estado01-0051-min-1366x769.png"
+                            description=""
+                            background="https://i.pinimg.com/originals/63/0f/c7/630fc76dcaa360f25796c0423ddb4435.jpg"
                         />
                     </RouterLink>
                     <RouterLink :to="{name:'about.faq'}" role="listitem">
                         <ArticleCard 
-                            eyebrow="2000"
+                            eyebrow=""
                             title="FAQ"
+                            description=""
                             background="https://whitewallapi.wpenginepowered.com/wp-content/uploads/2021/12/da-nft2-v20-estado01-0004-min-1366x769.png"
                         />
                     </RouterLink>

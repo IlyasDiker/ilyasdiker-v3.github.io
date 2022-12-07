@@ -3,32 +3,36 @@
         <div class="widgets-list">
             <div class="grid grid-gap-5">
                 <div class="col-12">
-                    <ShortcutButtonWidget class="white">
-                        <template v-slot:label>
-                            Show intetest <br> in working with me
-                        </template>
-                        <template v-slot:icon>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                            </svg>
-                        </template>
-                    </ShortcutButtonWidget>
-                </div>
-                <Transition name="slideup">
-                    <div class="col-6" v-show="isScrolled">
-                        <ShortcutButtonWidget>
+                    <a href="mailto:ilyasbenhssine@gmail.com">
+                        <ShortcutButtonWidget class="white">
                             <template v-slot:label>
-                                cv
+                                Show intetest <br> in working with me
                             </template>
                             <template v-slot:icon>
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                                 </svg>
                             </template>
                         </ShortcutButtonWidget>
+                    </a>
+                </div>
+                <Transition name="slideup">
+                    <div class="col-12" v-show="isScrolled">
+                        <router-link :to="{name: 'home.resumes'}">
+                            <ShortcutButtonWidget>
+                                <template v-slot:label>
+                                    cv
+                                </template>
+                                <template v-slot:icon>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13" />
+                                    </svg>
+                                </template>
+                            </ShortcutButtonWidget>
+                        </router-link>
                     </div>
                 </Transition>
-                <Transition name="slideup">
+                <!-- <Transition name="slideup">
                     <div class="col-6" v-show="isScrolled">
                         <ShortcutButtonWidget>
                             <template v-slot:label>
@@ -41,7 +45,7 @@
                             </template>
                         </ShortcutButtonWidget>
                     </div>
-                </Transition>
+                </Transition> -->
                 <!-- <Transition name="slideup">
                     <div class="col-12" v-show="isScrolled">
                         <ShortcutButtonWidget>

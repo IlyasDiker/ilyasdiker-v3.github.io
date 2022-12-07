@@ -29,7 +29,7 @@
                             />
                     </router-link>
                 </li>
-                <li>
+                <!-- <li>
                     <router-link to="/services">
                         <ListCard 
                             title="My Services"
@@ -37,7 +37,7 @@
                             :video="require('@/assets/myservices.mp4')"
                             />
                     </router-link>
-                </li>
+                </li> -->
             </ul>
         </div>
         <ShortcutWidget/>

@@ -25,4 +25,12 @@ exports.projects = [
         cover: require('@/assets/doorbea.webp'),
         description: 'Digitize your real estate agency in minutes.'
     },
+    {
+        id: 'wewash',
+        topic: 'Customer service app',
+        created_at: '2022',
+        title: 'WeWash',
+        cover: require('@/assets/wewash.webp'),
+        description: 'CarWasher at your doorstep in minutes. (WIP)'
+    },
 ]
