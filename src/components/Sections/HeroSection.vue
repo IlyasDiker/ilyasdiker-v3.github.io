@@ -32,7 +32,7 @@ export default {
         height: fit-content;
         flex-direction: column;
         justify-content: flex-end;
-        background-image: url('@/assets/wallpaper.png');
+        background-image: url('@/assets/wallpaper.webp');
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
