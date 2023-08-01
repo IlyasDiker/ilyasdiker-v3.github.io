@@ -8,8 +8,8 @@
                 <router-link to="/about" role="listitem">About me</router-link>
                 <router-link to="/projects" role="listitem">Projects</router-link>
                 <router-link to="/blog" role="listitem">Blog</router-link>
-                <a :href="socials.github" target="_blank" role="listitem"><i class='bx bxl-github'></i> Github</a>
-                <a :href="socials.linkedin" target="_blank" role="listitem"><i class='bx bxl-linkedin-square'></i> LinkedIn</a>
+                <a :href="socials.github" target="_blank" role="listitem"><i class='bx bxl-github'></i> <span class="nav-btn-text">Github</span></a>
+                <a :href="socials.linkedin" target="_blank" role="listitem"><i class='bx bxl-linkedin-square'></i> <span class="nav-btn-text">LinkedIn</span></a>
             </ul>
         </div>
     </nav>
@@ -53,6 +53,7 @@ export default {
         top: 0;
         left: 0;
         right: 0;
+        overflow-x: auto;
         padding-top: var(--container-padding);
         background: linear-gradient(var(--background), transparent);
         z-index: 100;
@@ -77,7 +78,7 @@ export default {
                 backdrop-filter: blur(10px);
                 border-radius: 2px;
                 transition: 0.2s ease-in-out;
-                gap: 7px;
+                // gap: 7px;
                 img{
                     width: 20px;
                     aspect-ratio:  1 / 1;
@@ -89,6 +90,22 @@ export default {
                     background: rgba(12, 179, 148, 0.7);
                 }
             }
+        }
+    }
+
+    .nav-btn-text{
+        max-width: 250px;
+        overflow: hidden;
+        transition: 0.2s ease-in-out;
+        padding-inline-start: 7px;
+    }
+
+    @media (max-width:600px) {
+        .nav-btn-text{
+            opacity: 0;
+            padding: 0;
+            max-width: 0px;
+            visibility: hidden;
         }
     }
 
