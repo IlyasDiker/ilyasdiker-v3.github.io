@@ -110,9 +110,10 @@ export default {
         width: 20%;
         min-width: 350px;
         max-width: 400px;
-        @media (max-width: 1000px) {
-            width: fit-content;
-            min-width: none;
+        transition: 0.2s ease-in-out;
+        @media (max-width: 500px) {
+            min-width: calc(100vw - (var(--container-padding)*2));
+            // min-width: unset;
         }
     }
 

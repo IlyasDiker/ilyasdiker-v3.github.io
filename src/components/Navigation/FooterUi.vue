@@ -42,4 +42,13 @@ export default {
             font-size: 13px;
         }
     }
+    .FooterSection{
+        transition: 0.2s ease-in-out;
+    }
+
+    @media (max-width: 800px) {
+        .FooterSection{
+            margin-bottom: 150px !important;
+        }
+    }
 </style>
